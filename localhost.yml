@@ -1,6 +1,6 @@
 - hosts: localhost
   connection: local
-  gather_facts: no           
+  gather_facts: no
   sudo: no
   vars:
     homebrew_taps:
@@ -89,6 +89,9 @@
 
     - name: homebrew をアップデート
       homebrew: update_homebrew=yes
+
+    - name: homebrew をアップグレード
+      homebrew: upgrade_all=yes
 
     # brew
     - name: brew パッケージをインストール
